@@ -1,0 +1,26 @@
+## ## use all methods in one script
+from selenium import webdriver
+from time import sleep
+
+opt = webdriver.ChromeOptions()
+opt.add_experimental_option("detach", True)
+driver = webdriver.Chrome(options=opt)
+driver.get("https://supertails.com")
+sleep(1)
+driver.maximize_window()
+sleep(2)
+driver.get("https://github.com/Adamya-github/JECRC-ADAMYA_GUPTA-6208519-JECT6MAROFF0274")
+sleep(2)
+print("Current URL:", driver.current_url)
+print("Browser Name:", driver.name)
+sleep(2)
+driver.back()
+sleep(2)
+driver.forward()
+sleep(2)
+driver.refresh()
+sleep(2)
+driver.minimize_window()
+sleep(2)
+driver.close()
+# driver.quit()
