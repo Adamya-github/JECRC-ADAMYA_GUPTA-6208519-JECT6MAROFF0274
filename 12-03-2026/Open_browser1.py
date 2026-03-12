@@ -1,9 +1,8 @@
-# To open Chrome browser
 from selenium import webdriver
-from time import sleep
+# from time import sleep
 
 opt = webdriver.ChromeOptions() ## use of ChromeOptions
-opt.add_experimental_option('detach', True) ## it will insure that chrome don't go sleep or closr by own
+opt.add_experimental_option('detach', True) ## it will ensure that Chrome doesn't go sleep or close by own
 driver = webdriver.Chrome(options=opt)
 # sleep(1)
 driver.get('https://supertails.com')
