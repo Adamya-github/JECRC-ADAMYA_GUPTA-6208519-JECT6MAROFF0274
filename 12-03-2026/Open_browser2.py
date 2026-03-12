@@ -1,5 +1,5 @@
 ## driver.close() it will close current windows but doesn't affect the connection
-## driver,quit() it will close all windows and quit the connection that is come out of connection
+## driver.quit() it will close all windows and quit the connection that is come out of connection
 
 from selenium import webdriver
 
@@ -23,5 +23,6 @@ driver.get('https://supertails.com')
 driver.maximize_window()
 
 driver.close()
-driver.quit()
+# driver.quit()
+
 
