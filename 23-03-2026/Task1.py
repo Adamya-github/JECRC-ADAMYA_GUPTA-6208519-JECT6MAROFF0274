@@ -1,5 +1,3 @@
-## open your fav ipl team page
-## scroll to picture and go up using page up and make it loop for 5
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
