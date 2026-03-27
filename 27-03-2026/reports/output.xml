@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.12.10 on win32)" generated="2026-03-27T15:50:50.311564" rpa="false" schemaversion="5">
+<suite id="s1" name="Checkboxes" source="C:\Users\Adamya Gupta\OneDrive\Desktop\Testing_Tech\JECRC\27-03-2026\checkboxes.robot">
+<test id="s1-t1" name="Handling Radio + Checkboxes For" line="14">
+<kw name="How to Handle Radio and Multiple Checkboxes via For">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:50:50.596342" level="INFO">Opening browser 'edge' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<arg>${url1}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-27T15:50:50.596342" elapsed="5.692545"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-27T15:50:56.289977" elapsed="0.058516"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:50:59.350868" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:50:56.349673" elapsed="3.001195"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:50:59.361388" level="INFO">Clicking element 'xpath=//input[@id="male"]'.</msg>
+<arg>xpath=//input[@id="male"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:50:59.350868" elapsed="0.148800"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:51:01.513118" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:50:59.500672" elapsed="2.012446"/>
+</kw>
+<kw name="Page Should Contain Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:51:01.812696" level="INFO">Current page contains checkbox 'xpath=//input[@id="sunday"]'.</msg>
+<arg>xpath=//input[@id="sunday"]</arg>
+<doc>Verifies checkbox ``locator`` is found from the current page.</doc>
+<status status="PASS" start="2026-03-27T15:51:01.514108" elapsed="0.298588"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:51:03.858877" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:51:01.812696" elapsed="2.046181"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:51:03.998929" level="INFO">Selecting checkbox 'xpath=//input[@id="sunday"]'.</msg>
+<arg>xpath=//input[@id="${day}"]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:51:03.997420" elapsed="1.563127"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:51:07.561871" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:51:05.560547" elapsed="2.001324"/>
+</kw>
+<var name="${day}">sunday</var>
+<status status="PASS" start="2026-03-27T15:51:03.858877" elapsed="3.702994"/>
+</iter>
+<iter>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:51:07.563375" level="INFO">Selecting checkbox 'xpath=//input[@id="monday"]'.</msg>
+<arg>xpath=//input[@id="${day}"]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:51:07.561871" elapsed="0.170417"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:51:09.733969" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:51:07.732288" elapsed="2.001681"/>
+</kw>
+<var name="${day}">monday</var>
+<status status="PASS" start="2026-03-27T15:51:07.561871" elapsed="2.172098"/>
+</iter>
+<iter>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:51:09.734982" level="INFO">Selecting checkbox 'xpath=//input[@id="tuesday"]'.</msg>
+<arg>xpath=//input[@id="${day}"]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:51:09.733969" elapsed="0.135207"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:51:11.870964" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:51:09.870367" elapsed="2.000597"/>
+</kw>
+<var name="${day}">tuesday</var>
+<status status="PASS" start="2026-03-27T15:51:09.733969" elapsed="2.136995"/>
+</iter>
+<iter>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:51:11.871577" level="INFO">Selecting checkbox 'xpath=//input[@id="wednesday"]'.</msg>
+<arg>xpath=//input[@id="${day}"]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:51:11.871577" elapsed="0.150637"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:51:14.024329" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:51:12.022214" elapsed="2.002115"/>
+</kw>
+<var name="${day}">wednesday</var>
+<status status="PASS" start="2026-03-27T15:51:11.871577" elapsed="2.152752"/>
+</iter>
+<iter>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:51:14.025390" level="INFO">Selecting checkbox 'xpath=//input[@id="thursday"]'.</msg>
+<arg>xpath=//input[@id="${day}"]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:51:14.025390" elapsed="0.180653"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:51:16.207276" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:51:14.206554" elapsed="2.000722"/>
+</kw>
+<var name="${day}">thursday</var>
+<status status="PASS" start="2026-03-27T15:51:14.024329" elapsed="2.182947"/>
+</iter>
+<iter>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:51:16.207276" level="INFO">Selecting checkbox 'xpath=//input[@id="friday"]'.</msg>
+<arg>xpath=//input[@id="${day}"]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:51:16.207276" elapsed="0.157308"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:51:18.366529" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:51:16.366079" elapsed="2.000450"/>
+</kw>
+<var name="${day}">friday</var>
+<status status="PASS" start="2026-03-27T15:51:16.207276" elapsed="2.159253"/>
+</iter>
+<iter>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:51:18.367157" level="INFO">Selecting checkbox 'xpath=//input[@id="saturday"]'.</msg>
+<arg>xpath=//input[@id="${day}"]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:51:18.367157" elapsed="0.161682"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:51:20.530059" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:51:18.528839" elapsed="2.001220"/>
+</kw>
+<var name="${day}">saturday</var>
+<status status="PASS" start="2026-03-27T15:51:18.367157" elapsed="2.162902"/>
+</iter>
+<var>${day}</var>
+<value>@{days}</value>
+<status status="PASS" start="2026-03-27T15:51:03.858877" elapsed="16.671182"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Unselect Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:51:20.531837" level="INFO">Unselecting checkbox 'xpath=//input[@id="saturday"]'.</msg>
+<arg>xpath=//input[@id="${day}"]</arg>
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:51:20.531837" elapsed="0.169707"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:51:22.703011" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:51:20.701544" elapsed="2.001467"/>
+</kw>
+<var name="${day}">saturday</var>
+<status status="PASS" start="2026-03-27T15:51:20.531837" elapsed="2.171174"/>
+</iter>
+<iter>
+<kw name="Unselect Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:51:22.704591" level="INFO">Unselecting checkbox 'xpath=//input[@id="friday"]'.</msg>
+<arg>xpath=//input[@id="${day}"]</arg>
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:51:22.703011" elapsed="0.146489"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:51:24.850979" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:51:22.849500" elapsed="2.001479"/>
+</kw>
+<var name="${day}">friday</var>
+<status status="PASS" start="2026-03-27T15:51:22.703011" elapsed="2.148507"/>
+</iter>
+<iter>
+<kw name="Unselect Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:51:24.852532" level="INFO">Unselecting checkbox 'xpath=//input[@id="thursday"]'.</msg>
+<arg>xpath=//input[@id="${day}"]</arg>
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:51:24.851518" elapsed="0.172944"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:51:27.026156" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:51:25.024462" elapsed="2.001694"/>
+</kw>
+<var name="${day}">thursday</var>
+<status status="PASS" start="2026-03-27T15:51:24.851518" elapsed="2.174638"/>
+</iter>
+<iter>
+<kw name="Unselect Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:51:27.027202" level="INFO">Unselecting checkbox 'xpath=//input[@id="wednesday"]'.</msg>
+<arg>xpath=//input[@id="${day}"]</arg>
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:51:27.027202" elapsed="0.153547"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:51:29.182257" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:51:27.180749" elapsed="2.001508"/>
+</kw>
+<var name="${day}">wednesday</var>
+<status status="PASS" start="2026-03-27T15:51:27.026156" elapsed="2.156101"/>
+</iter>
+<iter>
+<kw name="Unselect Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:51:29.183286" level="INFO">Unselecting checkbox 'xpath=//input[@id="tuesday"]'.</msg>
+<arg>xpath=//input[@id="${day}"]</arg>
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:51:29.182257" elapsed="0.112734"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:51:31.298978" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:51:29.295965" elapsed="2.003013"/>
+</kw>
+<var name="${day}">tuesday</var>
+<status status="PASS" start="2026-03-27T15:51:29.182257" elapsed="2.116721"/>
+</iter>
+<iter>
+<kw name="Unselect Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:51:31.300092" level="INFO">Unselecting checkbox 'xpath=//input[@id="monday"]'.</msg>
+<arg>xpath=//input[@id="${day}"]</arg>
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:51:31.298978" elapsed="0.534258"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:51:33.834906" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:51:31.833236" elapsed="2.001670"/>
+</kw>
+<var name="${day}">monday</var>
+<status status="PASS" start="2026-03-27T15:51:31.298978" elapsed="2.535928"/>
+</iter>
+<iter>
+<kw name="Unselect Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:51:33.835413" level="INFO">Unselecting checkbox 'xpath=//input[@id="sunday"]'.</msg>
+<arg>xpath=//input[@id="${day}"]</arg>
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:51:33.835413" elapsed="0.232515"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:51:36.069606" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:51:34.067928" elapsed="2.001678"/>
+</kw>
+<var name="${day}">sunday</var>
+<status status="PASS" start="2026-03-27T15:51:33.835413" elapsed="2.234193"/>
+</iter>
+<var>${day}</var>
+<value>@{days[::-1]}</value>
+<status status="PASS" start="2026-03-27T15:51:20.530705" elapsed="15.538901"/>
+</for>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-27T15:51:36.069606" elapsed="3.495666"/>
+</kw>
+<doc>Testautomation radio and checkboxes</doc>
+<status status="PASS" start="2026-03-27T15:50:50.595258" elapsed="48.970014"/>
+</kw>
+<status status="PASS" start="2026-03-27T15:50:50.594303" elapsed="48.971875"/>
+</test>
+<doc>handling checkboxes</doc>
+<status status="PASS" start="2026-03-27T15:50:50.317632" elapsed="49.251074"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Checkboxes" id="s1" pass="1" fail="0" skip="0">Checkboxes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

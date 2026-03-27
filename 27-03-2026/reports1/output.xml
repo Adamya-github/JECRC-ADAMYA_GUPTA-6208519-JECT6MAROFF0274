@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.12.10 on win32)" generated="2026-03-27T15:16:50.663742" rpa="false" schemaversion="5">
+<suite id="s1" name="Checkboxes" source="C:\Users\Adamya Gupta\OneDrive\Desktop\Testing_Tech\JECRC\27-03-2026\checkboxes.robot">
+<test id="s1-t1" name="Handling Checkboxes" line="7">
+<kw name="How to Handle Checkboxes">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:16:50.915668" level="INFO">Opening browser 'headlesschrome' to base url 'https://the-internet.herokuapp.com/'.</msg>
+<arg>${url}</arg>
+<arg>headlesschrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-27T15:16:50.915668" elapsed="4.931618"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-27T15:16:55.847286" elapsed="0.029035"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:16:58.877760" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:16:55.876321" elapsed="3.001439"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:16:58.878784" level="INFO">Clicking element 'xpath=//a[text()="Checkboxes"]'.</msg>
+<arg>xpath=//a[text()="Checkboxes"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:16:58.877760" elapsed="0.445630"/>
+</kw>
+<kw name="Page Should Contain Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:16:59.361360" level="INFO">Current page contains checkbox 'xpath=(//input[@type="checkbox"])[1]'.</msg>
+<arg>xpath=(//input[@type="checkbox"])[1]</arg>
+<doc>Verifies checkbox ``locator`` is found from the current page.</doc>
+<status status="PASS" start="2026-03-27T15:16:59.323390" elapsed="0.037970"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:17:02.361494" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:16:59.361360" elapsed="3.000134"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:17:02.361494" level="INFO">Selecting checkbox 'xpath=(//input[@type="checkbox"])[1]'.</msg>
+<arg>xpath=(//input[@type="checkbox"])[1]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:17:02.361494" elapsed="0.071127"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:17:05.432913" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:17:02.432621" elapsed="3.000292"/>
+</kw>
+<kw name="Unselect Checkbox" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:17:05.432913" level="INFO">Unselecting checkbox 'xpath=(//input[@type="checkbox"])[2]'.</msg>
+<arg>xpath=(//input[@type="checkbox"])[2]</arg>
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:17:05.432913" elapsed="0.128261"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:17:08.563138" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:17:05.561174" elapsed="3.001964"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-27T15:17:08.563138" elapsed="2.211799"/>
+</kw>
+<doc>herokuapp checkboxes</doc>
+<status status="PASS" start="2026-03-27T15:16:50.914663" elapsed="19.860274"/>
+</kw>
+<status status="PASS" start="2026-03-27T15:16:50.913664" elapsed="19.863699"/>
+</test>
+<doc>handling checkboxes</doc>
+<status status="PASS" start="2026-03-27T15:16:50.665743" elapsed="20.113657"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Checkboxes" id="s1" pass="1" fail="0" skip="0">Checkboxes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
