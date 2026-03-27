@@ -25,9 +25,10 @@ actions.release().perform()
 driver.find_element(By.CLASS_NAME, "submit").click()
 sleep(5)
 
-driver.refresh()
-
+driver.back()
+driver.switch_to.frame("result")
 text = driver.find_element(By.TAG_NAME, "h1").text
-assert "Registration" in text
+assert "Registration" in text, 'Not Present.'
+print('Done')
 
 driver.quit()
