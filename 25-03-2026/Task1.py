@@ -1,51 +1,53 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
-driver = webdriver.Chrome()
-driver.get("https://www.amazon.in/")
+
+opts = webdriver.ChromeOptions()
+opts.add_experimental_option('detach', True)
+driver = webdriver.Chrome(options=opts)
+
+driver.get('https://www.amazon.in/')
 driver.maximize_window()
-driver.implicitly_wait(10)
-
-print(driver.title)
-print(driver.current_url)
-
-search_box = driver.find_element(By.ID, "twotabsearchtextbox")
-search_box.send_keys("Headphones",Keys.RETURN)
 sleep(2)
 
-driver.find_element(By.XPATH,'(//div[@class="a-checkbox a-checkbox-fancy s-navigation-checkbox aok-float-left"])[4]').click()
-sleep(2)
+assert 'amazon' in driver.current_url, 'Error'
 
-min_price = driver.find_element(By.XPATH, "//input[@aria-label='Minimum price']")
-max_price = driver.find_element(By.XPATH, "//input[@aria-label='Maximum price']")
-min_price.send_keys("1000")
-max_price.send_keys("2000")
-# driver.find_element(By.XPATH, "//input[@type='submit']").click()
-sleep(3)
+wait = WebDriverWait(driver, 10)
 
-first_product = driver.find_element(By.XPATH, "(//h2/a)[1]")
-product_name = first_product.text
-first_product.click()
+searchbox = wait.until(EC.visibility_of_element_located((By.ID, 'twotabsearchtextbox')))
+searchbox.send_keys('Headphones')
 
-tabs = driver.window_handles
-driver.switch_to.window(tabs[1])
+driver.find_element(By.ID, 'nav-search-submit-button').click()
 
-product_title = driver.find_element(By.ID, "productTitle").text
-assert product_name[:10] in product_title, "Product title mismatch"
+wait.until(EC.presence_of_element_located((By.XPATH, '//ul[@id="filter-p_123"]/descendant::li[3]'))).click()
+wait.until(EC.presence_of_element_located((By.XPATH, '//div[@id="priceRefinements"]/descendant::a[6]'))).click()
 
-product_price = driver.find_element(By.XPATH, "//span[@class='a-price-whole']").text
-assert product_price != "", "Price not displayed"
+new_product = wait.until(EC.presence_of_element_located((By.XPATH, '//div[@role="listitem"]/descendant::h2/span')))
+product_title = new_product.text
+new_product.click()
 
-driver.find_element(By.ID, "add-to-cart-button").click()
-sleep(2)
+driver.switch_to.window(driver.window_handles[-1])
 
-driver.find_element(By.ID, "nav-cart").click()
+product_price = wait.until(EC.presence_of_element_located(
+    (By.XPATH, '//span[@class="a-price"]/span[@class="a-offscreen"]'))).text
 
-cart_product = driver.find_element(By.XPATH, "//span[@class='a-truncate-cut']").text
-assert product_name[:10] in cart_product, "Cart item mismatch"
-print("Test Completed Successfully ")
+assert product_title in wait.until(EC.presence_of_element_located(
+    (By.ID, 'productTitle'))).text, 'Product not found'
 
+assert product_price in wait.until(EC.presence_of_element_located(
+    (By.XPATH, "//span[@class='a-price-whole']"))).text, 'Product not found'
 
+cart_button = wait.until(EC.presence_of_element_located((By.ID, 'add-to-cart-button')))
+cart_button.click()
+
+cart = wait.until(EC.presence_of_element_located((By.ID, 'nav-cart')))
+cart.click()
+
+assert product_title in wait.until(EC.presence_of_element_located((By.XPATH, '//span[@class="a-truncate-full a-offscreen"]'))).get_attribute('textContent'), 'Wrong Product'
+
+assert product_price in wait.until(EC.presence_of_element_located((By.XPATH, '//span[@class="a-offscreen"]'))).text, 'Wrong product'
+print('successful')
 driver.quit()
